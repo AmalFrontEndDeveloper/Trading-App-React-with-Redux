@@ -1,0 +1,5 @@
+1. npx create-react-app . --template typescript
+2. npm i @reduxjs/toolkit @types/react-redux react-redux --save
+3. npm i ag-grid-community ag-grid-react date-fns react-router-dom yup --save
+4. npm i @emotion/react @emotion/styled @fontsource/roboto @mui/icons-meterial @mui/material --save
+5. npm i highcharts highcharts-react-official react-highcharts --save
