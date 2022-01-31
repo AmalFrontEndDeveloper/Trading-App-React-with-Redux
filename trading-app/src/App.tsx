@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { createTheme, CssBaseline, TextField, ThemeProvider } from '@mui/material';
-import { AppBarComponent, SideBar } from './components';
+import { AppBarComponent, SideBar, Menu } from './components';
+import { ROUTES } from './routes';
+//import { ROUTES } from './routes';
 
 
 export const App: React.FC = (): JSX.Element => {
@@ -24,8 +26,8 @@ export const App: React.FC = (): JSX.Element => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <AppBarComponent handleDrawerToggle={handleDrawerToggle} onThemeChange={onThemeChange} />
-      <SideBar isOpen={sideBarToggle} handleDrawerToggle={handleDrawerToggle} />
+      <AppBarComponent handleDrawerToggle={handleDrawerToggle} onThemeChange={onThemeChange} isDarkMode={themMode==="dark"} isDrawerOpen={sideBarToggle} />
+      <SideBar isOpen={sideBarToggle} handleDrawerToggle={handleDrawerToggle} children={<Menu links={ROUTES} />} />
       <div>
       </div>
     </ThemeProvider>
